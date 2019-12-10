@@ -34,7 +34,7 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
   And I should see "The Terminator"
   And I should not see "Alladin"
   And I should not see "The Help"
-
+ 
 Scenario: all ratings selected
   When I check the following ratings: PG, R, G, PG-13
   And I press "ratings_submit"

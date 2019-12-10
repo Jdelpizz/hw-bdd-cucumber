@@ -21,7 +21,7 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
     step %{I #{uncheck.nil? ? '' : 'un'}check "ratings_#{rating}"}
   end
 end
-
+ 
 
 Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
