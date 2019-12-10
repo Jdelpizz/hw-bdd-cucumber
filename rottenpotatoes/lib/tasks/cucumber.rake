@@ -14,19 +14,31 @@ begin
   require 'cucumber/rake/task'
 
   namespace :cucumber do
+<<<<<<< HEAD
     Cucumber::Rake::Task.new({:ok => 'test:prepare'}, 'Run features that should pass') do |t|
+=======
+    Cucumber::Rake::Task.new({:ok => 'db:test:prepare'}, 'Run features that should pass') do |t|
+>>>>>>> origin/master
       t.binary = vendored_cucumber_bin # If nil, the gem's binary is used.
       t.fork = true # You may get faster startup if you set this to false
       t.profile = 'default'
     end
 
+<<<<<<< HEAD
     Cucumber::Rake::Task.new({:wip => 'test:prepare'}, 'Run features that are being worked on') do |t|
+=======
+    Cucumber::Rake::Task.new({:wip => 'db:test:prepare'}, 'Run features that are being worked on') do |t|
+>>>>>>> origin/master
       t.binary = vendored_cucumber_bin
       t.fork = true # You may get faster startup if you set this to false
       t.profile = 'wip'
     end
 
+<<<<<<< HEAD
     Cucumber::Rake::Task.new({:rerun => 'test:prepare'}, 'Record failing features and run only them if any exist') do |t|
+=======
+    Cucumber::Rake::Task.new({:rerun => 'db:test:prepare'}, 'Record failing features and run only them if any exist') do |t|
+>>>>>>> origin/master
       t.binary = vendored_cucumber_bin
       t.fork = true # You may get faster startup if you set this to false
       t.profile = 'rerun'
@@ -40,6 +52,7 @@ begin
       ::STATS_DIRECTORIES << %w(Cucumber\ features features) if File.exist?('features')
       ::CodeStatistics::TEST_TYPES << "Cucumber features" if File.exist?('features')
     end
+<<<<<<< HEAD
 
     task :annotations_setup do
       Rails.application.configure do
@@ -49,6 +62,8 @@ begin
         end
       end
     end
+=======
+>>>>>>> origin/master
   end
   desc 'Alias for cucumber:ok'
   task :cucumber => 'cucumber:ok'
@@ -59,6 +74,7 @@ begin
     STDERR.puts "*** The 'features' task is deprecated. See rake -T cucumber ***"
   end
 
+<<<<<<< HEAD
   # In case we don't have the generic Rails test:prepare hook, append a no-op task that we can depend upon.
   task 'test:prepare' do
   end
@@ -66,6 +82,13 @@ begin
   task :stats => 'cucumber:statsetup'
 
   task :notes => 'cucumber:annotations_setup'
+=======
+  # In case we don't have ActiveRecord, append a no-op task that we can depend upon.
+  task 'db:test:prepare' do
+  end
+
+  task :stats => 'cucumber:statsetup'
+>>>>>>> origin/master
 rescue LoadError
   desc 'cucumber rake task not available (cucumber not installed)'
   task :cucumber do

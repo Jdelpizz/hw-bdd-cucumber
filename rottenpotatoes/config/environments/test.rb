@@ -8,7 +8,10 @@ Rottenpotatoes::Application.configure do
   config.cache_classes = true
 
   # Configure static asset server for tests with Cache-Control for performance
+<<<<<<< HEAD
   #config.serve_static_assets = true
+=======
+>>>>>>> origin/master
   config.serve_static_files = true
   config.static_cache_control = "public, max-age=3600"
   config.eager_load = false

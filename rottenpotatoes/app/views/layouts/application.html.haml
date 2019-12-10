@@ -1,6 +1,7 @@
 !!! 5
 %html
   %head
+<<<<<<< HEAD
     %link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous")
     %title Rotten Potatoes!
     = stylesheet_link_tag 'application', 'media' => 'all'
@@ -20,3 +21,19 @@
               #warning.message= flash[:warning]
 
           = yield
+=======
+    %title Rotten Potatoes!
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+
+  %body
+    %h1.title Rotten Potatoes!
+    #main
+      - if flash[:notice]
+        #notice.message= flash[:notice]
+      - elsif flash[:warning]
+        #warning.message= flash[:warning]
+
+      = yield
+>>>>>>> origin/master
