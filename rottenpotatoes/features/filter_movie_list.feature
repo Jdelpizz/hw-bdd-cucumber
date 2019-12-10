@@ -20,10 +20,6 @@ Background: movies have been added to database
   | Chicken Run             | G      | 21-Jun-2000  |
 
   And  I am on the RottenPotatoes home page
-<<<<<<< HEAD
-=======
-  Then 10 seed movies should exist
->>>>>>> origin/master
 
 Scenario: restrict to movies with 'PG' or 'R' ratings
   # enter step(s) to check the 'PG' and 'R' checkboxes
@@ -31,7 +27,6 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
   # enter step to "submit" the search form on the homepage
   # enter step(s) to ensure that PG and R movies are visible
   # enter step(s) to ensure that other movies are not visible
-<<<<<<< HEAD
   When I check the following ratings: PG, R
   And I uncheck the following ratings: G, PG-13
   And I press "ratings_submit"
@@ -44,8 +39,3 @@ Scenario: all ratings selected
   When I check the following ratings: PG, R, G, PG-13
   And I press "ratings_submit"
   Then I should see all the movies
-=======
-
-Scenario: all ratings selected
-  # see assignment
->>>>>>> origin/master
